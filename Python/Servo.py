@@ -28,9 +28,10 @@ import navio.util
 navio.util.check_apm()
 
 #drive Output Enable in PCA low
+pcaPin = 27
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(27, GPIO.OUT)
-GPIO.output(27,GPIO.LOW)
+GPIO.setup(pcaPin, GPIO.OUT)
+GPIO.output(pcaPin, GPIO.LOW)
 
 PCA9685_DEFAULT_ADDRESS = 0x40
 frequency = 50
